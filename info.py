@@ -21,27 +21,27 @@ def is_enabled(value, default):
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '29450452'))
-API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '20792378'))
+API_HASH = environ.get('API_HASH', '3629751cd46faed6a7897ce31d56d79f')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7868998940:AAF-iJH3S-Ttzi4lZZ4dJymMPzIYiVA4Nxo")
 PICS = (environ.get('PICS' ,'https://telegra.ph/file/517bc12dd5c1347df10f6.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002037384930))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5986961670').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001853074923 -1001565553195 -1002112912927 -1001889509068 -1001565553195').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP', '')
-auth_channel = environ.get('AUTH_CHANNEL', '-1001889509068')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002076925276')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001860177906')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002170998708')).split()]
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://userbot:userbot@cluster0.iweqz.mongodb.net/test?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
@@ -80,7 +80,7 @@ GRP_LNK = environ.get('GRP_LNK', 'https://t.me/TheBlackXYZ_Movie_Group')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TheBlackXYZ')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'The_Black_XYZ_SupportChat') # without @
 FSUB_MODE = "REQ"
-REQ_CHANNEL = environ.get("REQ_CHANNEL", "TheBlackXYZBotz")
+REQ_CHANNEL = environ.get("REQ_CHANNEL", "Tamil_Mini")
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else AUTH_CHANNEL
 
